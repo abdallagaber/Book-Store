@@ -1,0 +1,32 @@
+.user-info {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.user-info h1 {
+  font-size: 36px;
+}
+
+.logout-button {
+  background-color: #bd0600;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.wishlist-section {
+  padding: 48px 0;
+}

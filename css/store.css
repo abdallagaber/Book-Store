@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+aside {
+  background-color: #eee;
+  padding: 20px 15px;
+  border-top: 2px solid #ccc;
+}
+
+aside a {
+  width: 100%;
+}
+
+aside h3 {
+  color: #00b3a6;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 5px;
+}
+
+aside ul li {
+  padding: 10px;
+}
+aside ul li:hover {
+  background-color: #ccc;
+}
+
+aside a.active {
+  color: #00b3a6;
+  font-weight: bold;
+}
+
+.store {
+  display: flex;
+}
+
+.books {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+.book {
+  background-color: #fcfcfc;
+  box-shadow: 4px 4px 6px #0000001a;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #f4f5f7;
+  justify-content: space-between;
+}
+
+.book img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background-color: #ccc;
+}
+
+.book h3 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 5px;
+  padding-inline: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.book .book-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.add-to-cart {
+  background-color: #00b3a6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-to-cart svg {
+  height: 20px;
+  width: 20px;
+  background-color: none;
+  fill: white;
+}
+
+.add-to-wishlist {
+  background-color: #fcfcfc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 4px 4px 6px #0000001a;
+}
+.add-to-wishlist svg {
+  fill: #5f5f5f;
+}
+
+.add-to-wishlist.active svg {
+  fill: #d20000;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #00b3a6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-form button:hover {
+  background-color: #009688;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 0;
+}
+
+.pagination a,
+.pagination span {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  text-decoration: none;
+  color: #00b3a6;
+  background-color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination .active {
+  background-color: #00b3a6;
+  color: white;
+  border-color: #00b3a6;
+}
+
+.pagination .disabled {
+  color: #6c757d;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 800px) {
+  .book {
+    width: 225px;
+  }
+}
+
+@media (max-width: 768px) {
+  .store {
+    flex-direction: column;
+  }
+  .book {
+    width: 175px;
+  }
+  .add-to-cart {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .add-to-cart svg {
+    display: none;
+  }
+  .add-to-wishlist {
+    padding: 5px;
+  }
+  aside ul {
+    height: 350px;
+    overflow-y: scroll;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form input[type="text"],
+  .search-form button {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination a,
+  .pagination span {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
